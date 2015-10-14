@@ -14,28 +14,13 @@ header('Location: rnmembers.php?view='.$user);?>
 	<link href="NOvaCube/css/style2.css" type="text/css" rel="stylesheet" media="screen" />
 	<link href="NOvaCube/css/style1.css" type="text/css" rel="stylesheet" media="screen" />
 	<link rel="stylesheet" href="NOvaCube/css/themes/default/default.css" type="text/css" media="screen" />
-	<link rel="prefetch" href="script.css"  />  <!--moz-->
-	<link rel="prerender" href="script.css"  /> <!--Chrome-->
-	<!-- <link rel="stylesheet" href="NOvaCube/css/nivo-slider.css" type="text/css" media="screen" />
-
+	<link rel="stylesheet" href="NOvaCube/css/nivo-slider.css" type="text/css" media="screen" />
 	<!-- Css Loading Animation  -->
-	<link rel="stylesheet" type="text/css" href='css/pose.css' />
-	<!-- Css+Jquery 3D Loading Animation  -->
-	<link rel="stylesheet" type="text/css" href='css/3dloadcomponent.css' />
-	<script type="text/javascript" src="js/modernizr.custom.3dload.js"></script>
+	<link rel="stylesheet"  type="text/css" href="NOvaCube/css/loading-animation.css" />
 </head>
-<body onload='shoanim()'>
-
-<div style='display:none;' id='slideshow' class='slideshow'>
-<center >
-<img id='logo' src='images/logo.png' />
-<br/><br/><br/><br/><br/>
-<div></div>
-
-</center>
-<div class="la-anim-5"></div>
-</div>
+<body>
 	<ul class="bokeh">
+		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
@@ -51,25 +36,25 @@ header('Location: rnmembers.php?view='.$user);?>
 <div class='div4'></div>
 
 <div class='logsign'>
-<div style='margin-left:120px;'>
+<table><tr>
+<td style='width:440px;'>
 <!-- <input id='chk' value='1' type='checkbox' checked='checked' /> -->
 <p align='center'><input id='button1'  style='width:90%;display:block;font-size:18;' value='SIgN Up..!!'  type='button'  /></p>
 
 <div id='signup' class='hide'>
 <form method='post' id='Signup-Form' action='signup.php'>
-<p align='center'>		<input type='text' name='user' placeholder='Username' required='required'/>
-		<input type='email' name='email'  placeholder='Your Email ID' ><br>
-	<input type='text' name='fname'  placeholder='Your First Name' required='required'/>
-	<input type='text' name='lname'  placeholder='Your Last Name' required='required'/><br/>
-		<input type='password' name='pass' id='pass' placeholder='Choose a Password' required='required'/>
-		<input type='password' name='passchk' id='passchk' placeholder='RETYPE It..!!' required='required'/><br>
-
+<p align='center'>		<input type='text' name='user' style='width:205;height:50px;' placeholder='Username' required='required'/>
+		<input type='email' name='email' style='width:205;height:50px;' placeholder='Your Email ID' ><br>
+		<input type='password' name='pass' id='pass' style='width:205;height:50px;' placeholder='Choose a Password' required='required'/>
+		<input type='password' name='passchk' id='passchk' style='width:205;height:50px;' placeholder='RETYPE It..!!' required='required'/><br>
+		<input type='text' name='fname' style='width:205;height:50px;' placeholder='Your First Name' required='required'/>
+		<input type='text' name='lname' style='width:205;height:50px;' placeholder='Your Last Name' required='required'/>
 	<br/>
 	<input type='submit' id='submitsign' style='width:60%;display:block;font-size:15;' value='submit' />
 	<span id='sign-error' style='margin-left:0px;'></span>
 </p>
 </form>
-</div>	<!-- SignUp Form-->
+</div>
 <div id='login' ><br/>
 	<div id='divpass' class='hide'>
 		<form method='post' id='Forgot-Form' action='passforgot.php'>
@@ -90,48 +75,57 @@ header('Location: rnmembers.php?view='.$user);?>
 	<div id='divlog'>
 		<form method='post' id='Login-Form' action='login.php'>
 		<b class='ud1btn'>UserName</b>
-		<input type='text' id='userlg' name='userlg' style='width:250;height:50px;' placeholder='Your unique Username' ><br/><br/>
+		<input type='text' id='userlg' name='userlg' style='width:250;height:50px;' placeholder='Your unique Username' required><br/><br/>
 		<b class='ud1btn'>PassWord</b>
 		<input type='password' id='passlg' name='passlg' style='width:250;height:50px;' placeholder='Your unique Password' required>
 		<a href="#" class='ud1btn' id="forgot"><small>Forgot..?</small></a><br/>
 		<p align='center'>
 		<input type='submit' id='submitlog' style='width:60%;display:block;font-size:15;' value='submit'/>
-		<span id='log-error' style='margin-left:0px;'>  </span>
+		<span id='log-error' style='margin-left:0px;'></span>
 		</p>
 		</form><br/>
 	</div>
-</div> <!-- Login Form-->
 
 </div>
+</td>
+<td style="width: 5%" rowspan="2">
+		&nbsp;&nbsp;&nbsp;
+		<img alt="" src="images/div.png"  width="1" height="300">
+</td>
+<td>
+		<div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="images/toystory.jpg" data-thumb="images/toystory.jpg" alt="" />
+                <a href="#"><img src="images/up.jpg" data-thumb="images/up.jpg" alt="" title="This is an example of a caption" /></a>
+                <img src="images/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="slideInLeft" />
+                <img src="images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" />
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+            </div>
+		</div>
+
+<p align='center' id='footer'>&copy; SocialNova Inc, WaVe Corp&trade;.</p>
+</td>
+</tr>
+</table>
 </div>
-
-<script >
-function shoanim(){
-var anim = $('#slideshow');
-//var inProgress = false;
-var animEl = document.querySelector('.la-anim-5');
-anim.show();
-classie.add( animEl, 'la-animate' );
-}
-</script>
-
 <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-
-<script type="text/javascript" src="js/classie.js"></script>
 <script type="text/javascript">
 $.ajaxSetup({ cache: true });
 function loadjs(){ 
-/*		$.getScript('NOvaCube/js/jquery.nivo.slider.min.js',function(data1){console.log('data1');
-	*/
-	$.getScript('js/modernizr.custom.63321.loading.js',function(data3){console.log('data3');
-		//$('#slider').nivoSlider();
-	});
-$('.slideshow').hide();
+		$.getScript('NOvaCube/js/jquery.nivo.slider.min.js',function(data1){console.log('data1');
+			$.getScript('js/modernizr.custom.63321.loading.js',function(data3){console.log('data3');
+			$('#slider').nivoSlider();
+			});
+		});
 }
+$(window).load(function() {
+window.loadjs();
+});
 </script>
 <script type="text/javascript">
 $(document).ready(function(){
-window.setTimeout('loadjs()',3000);
 function new2site(){
 document.getElementById('button1').value='New To this Site...??';
 }
@@ -274,6 +268,7 @@ else{
 	return false;
 }); 
 </script>
+
 <!-- ................Dont modify These Codes..,Meant for PhP-AJaX Sign-up ..........-->
 </body>
 </html>
